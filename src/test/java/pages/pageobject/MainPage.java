@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MainPage extends ParentPage {
 
-    private static String COMPOSE_BUTTON_XPATH = "//div[text() = 'COMPOSE']";
+    private static String COMPOSE_BUTTON_XPATH = "//div[text() = 'Compose']";
     private static String SEND_TO_XPATH = "//textarea[@aria-label = 'To']";
     private static String SUBJECT_INPUT_XPATH = "//input[@name='subjectbox']";
     private static String MESSAGE_BODY_INPUT_XPATH = "//div[@aria-label='Message Body']";
