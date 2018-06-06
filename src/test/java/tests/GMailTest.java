@@ -33,34 +33,6 @@ public class GMailTest {
         Assert.assertTrue(title.contains("cdpautomation9@gmail.com"), "Expected: [cdpautomation9@gmail.com]. Actual: ".concat(title));
     }
 
-    @Test(description = "Check Bin folder is empty", dependsOnMethods = "loginToGMailAccount")
-    public void cleanBinFolder() {
-        Assert.assertTrue(new BinMailPage(driver).isBinEmpty());
-    }
-
-    @Test(description = "Create an email",  dependsOnMethods = "cleanBinFolder")
-    public void createDraftEmail() {
-        new MainPage(driver).createEmail();
-        new MainPage(driver).saveAsDraft();
-        Assert.assertTrue(new MainPage(driver).isDraftCreated(), "Draft email has not been created.");
-    }
-
-    @Test(description = "Save email as draft",  dependsOnMethods = "createDraftEmail")
-    public void sendEmail() {
-        new MainPage(driver).sendEmail();
-        Assert.assertTrue(new MainPage(driver).isEmailSent());
-    }
-
-    @Test(description = "Delete emails from Sent folder",  dependsOnMethods = "sendEmail")
-    public void workWithInboxEmail() {
-        Assert.assertTrue(new InboxPage(driver).isEmailPresent());
-    }
-    
-    @Test(description = "Save email as draft",  dependsOnMethods = "workWithInboxEmail", alwaysRun = true)
-    public void logout() {
-        Assert.assertTrue(new LogoutPage(driver).isLogout());
-    }
-
     @AfterClass(description = "Stop browser")
     public void closeBrowser() {
         driver.quit();
