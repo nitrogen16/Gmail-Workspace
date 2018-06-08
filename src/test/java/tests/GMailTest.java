@@ -66,5 +66,4 @@ public class GMailTest {
         driver.quit();
         System.out.println("Browser was successfully closed.");
     }
-
 }
