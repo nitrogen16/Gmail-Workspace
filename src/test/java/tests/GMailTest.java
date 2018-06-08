@@ -27,10 +27,7 @@ public class GMailTest {
 
     @Test(description = "Login to GMail account")
     public void loginToGMailAccount() {
-        //Assert.assertTrue(new LoginPage(driver).loginToGMailAccount().isComposeButtonDisplayed(), "You have not login to your GMail account.");
-        //JavascriptExecutor js = (JavascriptExecutor)driver;
-        //String title = js.executeScript("return document.title;").toString();
-        //Assert.assertTrue(title.contains("cdpautomation9@gmail.com"), "Expected: [cdpautomation9@gmail.com]. Actual: ".concat(title));
+        System.out.println("Hi Jack!");
     }
 
     @AfterClass(description = "Stop browser")
